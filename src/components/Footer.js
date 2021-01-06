@@ -1,11 +1,23 @@
-class Footer extends App {
-    render(){  
+import React, { Component } from "react"
+import { Nav, NavItem, NavLink } from "reactstrap"
+
+class Footer extends Component {
+  render() {
     return (
-     <div>
-         <h1>This is our Footer!</h1>
-     </div>
-    ); 
-    }
-  } 
-  
-  export default Footer;
+      <div>
+        <hr />
+        <p>Link Based</p>
+        <Nav>
+          <NavLink href="#">See the Cats</NavLink>{" "}
+          <NavLink href="#">Create a cat</NavLink>{" "}
+          <NavLink href="#">Destroy the cat</NavLink>{" "}
+          <NavLink disabled href="#">
+            Disabled Link
+          </NavLink>
+        </Nav>
+      </div>
+    )
+  }
+}
+
+export default Footer
