@@ -2,10 +2,15 @@ import React, { Component } from "react"
 
 class CatShow extends Component {
   render() {
+    console.log(this.props.cat)
+    let { cat } = this.props
     return (
-      <div>
+      <>
         <h1>This is our CatShow!</h1>
-      </div>
+        <p> { cat.name} </p>
+        <p>{ cat.age} </p>
+        <p>{ cat.enjoys} </p>
+      </>
     )
   }
 }
