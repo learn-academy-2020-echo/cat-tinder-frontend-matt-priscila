@@ -5,9 +5,11 @@ class CatIndex extends Component {
     return (
       <>
         <h1>Come Meow with Us!</h1>
-        { this.props.cats.map((cat, index) => {
+        {this.props.cats.map((cat, index) => {
           return (
-            <a href={`/catshow/${cat.id}`}><p key={ index }>{ cat.name }</p></a>
+            <a href={`/catshow/${cat.id}`}>
+              <p key={index}>{cat.name}</p>
+            </a>
           )
         })}
       </>

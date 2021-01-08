@@ -22,6 +22,10 @@ class App extends Component {
       cats: cats,
     }
   }
+
+  createCat = (newcat) => {
+    console.log(newcat)
+  }
   render() {
     return (
       <Router>
@@ -29,28 +33,30 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           {/* <Route path="/catindex" component={CatIndex} /> */}
-    
-          <Route 
-            path="/catindex" 
-            render={ (props) => <CatIndex cats={ this.state.cats} 
-             /> } 
-          />
-          
-          {/* <Route path="/catshow" component={CatShow} /> */}
-          <Route 
-            path="/catshow/:id" 
-            render={ (props) => {
 
+          <Route
+            path="/catindex"
+            render={(props) => <CatIndex cats={this.state.cats} />}
+          />
+
+          {/* <Route path="/catshow" component={CatShow} /> */}
+          <Route
+            path="/catshow/:id"
+            render={(props) => {
               let id = props.match.params.id
 
-              let cat = this.state.cats.find(cat => cat.id === parseInt(id))
+              let cat = this.state.cats.find((cat) => cat.id === parseInt(id))
 
-              return <CatShow cat={ cat} />
+              return <CatShow cat={cat} />
             }}
-            
           />
 
-          <Route path="/catnew" component={CatNew} />
+          {/* <Route path="/catnew" component={CatNew} /> */}
+          <Route
+            path="/catnew"
+            render={(props) => <CatNew createCat={this.createCat} />}
+          />
+
           <Route path="/catedit" component={CatEdit} />
           <Route component={NotFound} />
         </Switch>
