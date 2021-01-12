@@ -2,8 +2,8 @@
 .header-buttons {
   align-items: center;
   border: 3px solid black;
-  padding: 4rem;
-  background-color: #0eaf0eaa;
+  padding: 1rem;
+  background-color: #ffd6d2;
   display: flex;
   justify-content: space-between;
 }
@@ -11,35 +11,41 @@
 #home-button {
   padding: 1rem;
   font-size: 20px;
-  background-color: #94630e;
+  background-color: #8b7a82;
+  color: #b4d7ff;
+  font-family:cursive
 }
 #create-button {
   padding: 1rem;
   font-size: 20px;
-  background-color: #94630e;
+  background-color: #8b7a82;
+  color: #f2f2f2;
+  font-family:cursive
 }
 
 #browse-button {
   padding: 1rem;
   font-size: 20px;
-  background-color: #94630e;
+  background-color: #8b7a82;
+  color: #b6e7b8;
+  font-family:cursive
 }
 
 #first-button {
   padding: 1rem;
   font-size: 20px;
-  background-color: #94630e;
+  background-color: #8b7a82;
 }
 
 .main-body {
-  border: 2px solid black;
+  /* border: 2px solid black;
   margin-left: 7rem;
   margin-right: 7rem;
   margin-bottom: 5rem;
-  padding: 2rem;
+  padding: 2rem; */
   text-align: center;
-  background-color: #94630e;
-  height: 70vh;
+  background-color: #8b7a82;
+  /* height: 70vh; */
 }
 
 #home-pic {
