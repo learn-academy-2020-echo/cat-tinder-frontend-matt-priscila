@@ -29,11 +29,12 @@ class CatNew extends Component {
 
   render() {
     return (
-      <>
+      <div className= "main-body">
         <h1>Create your Purrfile</h1>
         <Form>
           <FormGroup>
             <Label>Name</Label>
+            <br />
             <Input
               type="text"
               name="name"
@@ -41,9 +42,10 @@ class CatNew extends Component {
               value={this.state.form.name}
             />
           </FormGroup>
-
+          <br />
           <FormGroup>
             <Label>Age</Label>
+            <br />
             <Input
               type="number"
               name="age"
@@ -51,16 +53,19 @@ class CatNew extends Component {
               value={this.state.form.age}
             />
           </FormGroup>
-
+          <br />
           <FormGroup>
             <Label>Enjoys</Label>
+            <br />
             <Input
               type="text"
               name="enjoys"
               onChange={this.handleChange}
               value={this.state.form.enjoys}
             />
+            
           </FormGroup>
+          <br />
           <Button name="submit" onClick={this.handleSubmit}>
             Create new Purrfile
           </Button>
@@ -71,7 +76,7 @@ class CatNew extends Component {
           <br />
         </Form>
         {this.state.submitted && <Redirect to="/catindex" />}
-      </>
+      </div>
     )
   }
 }

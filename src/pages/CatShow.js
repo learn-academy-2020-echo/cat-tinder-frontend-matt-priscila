@@ -6,7 +6,7 @@ class CatShow extends Component {
     console.log(this.props.cat)
     let { cat } = this.props
     return (
-      <div className="showpage">
+      <div className="main-body">
         <h1>Hi! Nice to meet ya!</h1>
         <p>My names, {cat.name}</p>
         <p>I'm {cat.age} years old</p>

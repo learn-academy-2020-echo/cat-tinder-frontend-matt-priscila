@@ -1,4 +1,12 @@
 import React, { Component } from "react"
+import {
+  Button,
+  Form,
+  FormGroup,
+  Input,
+  Label
+} from 'reactstrap'
+import { Redirect } from 'react-router-dom'
 
 class CatEdit extends Component {
   constructor(props) {
@@ -27,11 +35,58 @@ class CatEdit extends Component {
 
   render() {
     return (
-      <div>
-        <h1>This is our CatEdit!</h1>
-      </div>
-    )
-  }
+      <div className="main-body">
+      <h3>Update Cat Purrfile</h3>
+      <Form>
+        <FormGroup>
+          <Label>Name</Label>
+          <br />
+          <Input
+            type="text"
+            name="name"
+            onChange={ this.handleChange }
+            value={ this.state.form.name }
+          />
+        </FormGroup>
+        <br />
+        <FormGroup>
+          <Label>Age</Label>
+          <br />
+          <Input
+            type="number"
+            name="age"
+            onChange={ this.handleChange }
+            value={ this.state.form.age }
+          />
+        </FormGroup>
+        <br />
+        <FormGroup>
+          <Label>Enjoys</Label>
+          <br />
+          <Input
+            type="text"
+            name="enjoys"
+            onChange={ this.handleChange }
+            value={ this.state.form.enjoys }
+          />
+        </FormGroup>
+        <br />
+        <Button
+          name="submit"
+          color="secondary"
+          onClick={ this.handleSubmit }
+        >
+          Edit Cat Profile
+        </Button>
+      </Form>
+      { this.state.submitted &&
+        <Redirect
+          to={ `/catshow/${this.props.cat.id}` }
+        />
+      }
+    </div>
+  )
+}
 }
 
 export default CatEdit
