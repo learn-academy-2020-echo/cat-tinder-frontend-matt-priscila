@@ -9,9 +9,15 @@ class Footer extends Component {
         <br/>
         <br/>
         <br/>
-        <br/>
+        
 
-     <center>Created by Matt & Priscila | ECHO 2021</center>
+     <center>Created by Matt & Priscila
+                   | ECHO 2021</center>
+     <br/>
+     <br/>
+     <br/>
+
+        
       </div>
     )
   }

@@ -15,6 +15,22 @@
   color: #b4d7ff;
   font-family:cursive
 }
+
+/* CatEdit */
+.catedit-body{
+ background-color: #8b7a82;
+
+}
+
+/* catIndex */
+.index-links{
+background-color: #8b7a82;
+/* border: 2px solid #b6e7b8; */
+font-size: 30px;
+padding: 3rem;
+color: #561558;
+
+}
 #create-button {
   padding: 1rem;
   font-size: 20px;
@@ -46,8 +62,16 @@
   text-align: center;
   background-color: #8b7a82;
   /* height: 70vh; */
+  font-family:cursive
 }
 
 #home-pic {
   width: 50%;
+}
+/* footer */
+
+.footer {
+background-color: #ffd6d2;
+/* padding: 1rem; */
+/* margin-bottom: 5rem; */
 }

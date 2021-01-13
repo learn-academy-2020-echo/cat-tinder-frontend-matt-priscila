@@ -68,7 +68,35 @@ class App extends Component {
 
   updateCat = (editcat, id) => {
     console.log(editcat)
+    console.log(id)
+    fetch(`http://localhost:3000/catshow/${id}`,
+   {
+      body: JSON.stringify(editcat),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "PATCH",
+    })
+      .then((response) => {
+        if (response === 422) {
+          alert("That submission did not work, please try again!")
+        }
+        console.log(response)
+        return response.json()
+      })
+      .then((payload) => {
+        console.log(payload)
+        this.catIndex()
+      })
+      .catch((errors) => {
+        console.log("create errors:", errors)
+      })
+
   }
+
+  // deleteCat = (deletecat, id) => {
+  //   console.log(editcat)
+  //   console.log(id)
 
   render() {
     return (
@@ -101,7 +129,14 @@ class App extends Component {
             render={(props) => <CatNew createCat={this.createCat} />}
           />
 
-          <Route path="/catedit" component={CatEdit} />
+          <Route
+            exact path={"/catedit/:id"}
+            render={ (props) => {
+              let id = props.match.params.id
+              let cat = this.state.cats.find(cat => cat.id === parseInt(id))
+              return <CatEdit updateCat={ this.updateCat } cat={ cat } />
+            }}
+          /> 
           <Route component={NotFound} />
         </Switch>
         <Footer />

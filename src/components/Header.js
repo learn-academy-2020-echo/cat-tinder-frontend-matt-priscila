@@ -4,7 +4,7 @@ import { Button } from "reactstrap"
 class Header extends Component {
   render() {
     return (
-      <>
+      
         <div className="header-buttons">
           <img
             src="https://image.freepik.com/free-vector/cat-couple-love-tangling-their-tails_71767-44.jpg"
@@ -29,7 +29,7 @@ class Header extends Component {
             danger
           </Button> */}
         </div>
-      </>
+    
     )
   }
 }
